@@ -1,13 +1,12 @@
 package SecMec;
-/*
- * 
- */
-public class Usuario {
+
+public class Usuario extends Persona{
 	String username;
     String passwordHash;
     String salt;
     
-    public Usuario(String username, String passwordHash, String salt) {
+    public Usuario(String nombre, String dni, String email, String direccion, String username, String passwordHash, String salt) {
+    	super(nombre, dni, email, direccion);
     	this.username = username;
     	this.passwordHash = passwordHash;
     	this.salt = salt;
@@ -38,10 +37,6 @@ public class Usuario {
     }
     
     public String toString() {
-		return "Usuario{" +
-                ", Username:'" + username +
-                ", passwordHash:" + passwordHash +
-                ", salt:" + salt +
-                '}';
+		return super.toString() + " | Usuario: " + username;
 	}
 }

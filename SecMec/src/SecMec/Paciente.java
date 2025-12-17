@@ -1,18 +1,16 @@
 package SecMec;
 
-public class Paciente {
-	HistorialMedico historial;
-    Medico medicoAsignado;
-    public Paciente() {
-    	
+public class Paciente extends Persona{
+	private HistorialMedico historial;
+    private Medico medicoAsignado;
+    
+    public Paciente(String nombre, String dni, String email, String direccion) {
+    	super(nombre, dni, email, direccion);
+    	this.historial = new HistorialMedico();
     }
     
     public HistorialMedico getHistorial() {
     	return historial;
-    }
-    
-    public void setHistorial (HistorialMedico historial) {
-    	this.historial = historial;
     }
     
     public Medico getMedicoAsignado() {
@@ -23,10 +21,8 @@ public class Paciente {
     	this.medicoAsignado = medicoAsignado;
     }
     
+    @Override
     public String toString() {
-		return "Paciente{" +
-                ", Historial:'" + historial +
-                ", MedicoAsignado:" + medicoAsignado +
-                '}';
+		return super.toString();
 	}
 }
