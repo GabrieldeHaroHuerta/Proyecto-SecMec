@@ -13,7 +13,7 @@ public class Administrativo extends Usuario{
 	}
 	
 	public void asignarPrueba(Paciente paciente, PruebaMedica prueba) {
-		
+		paciente.getHistorial().agregarEntrada(prueba);
 	}
 	
 	@Override
