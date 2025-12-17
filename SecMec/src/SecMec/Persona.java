@@ -1,16 +1,16 @@
 package SecMec;
 
-public class Persona {
+public abstract class Persona {
 	protected String nombre;
 	protected String dni;
 	protected String email;
 	protected String direccion;
 
 	public Persona(String nombre, String dni, String email, String direccion) {
-	this.nombre = nombre;
-	this.dni = dni;
-	this.email = email;
-	this.direccion = direccion;
+		this.nombre = nombre;
+		this.dni = dni;
+		this.email = email;
+		this.direccion = direccion;
 	}
 	
 	public String getNombre() {

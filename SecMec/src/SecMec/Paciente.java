@@ -23,6 +23,6 @@ public class Paciente extends Persona{
     
     @Override
     public String toString() {
-		return super.toString();
+		return super.toString() + "\nMédico asignado: " + (medicoAsignado != null ? medicoAsignado.getNombre() : "Ninguno");
 	}
 }
